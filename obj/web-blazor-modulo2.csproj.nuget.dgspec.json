@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj": {}
+    "C:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj": {
+    "C:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj",
+        "projectUniqueName": "C:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj",
         "projectName": "web-blazor-modulo2",
-        "projectPath": "c:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj",
+        "projectPath": "C:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\web-blazor-modulo2.csproj",
         "packagesPath": "C:\\Users\\ibge\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\obj\\",
+        "outputPath": "C:\\Users\\ibge\\Desktop\\ProjetosIBGE\\web-blazor-modulo2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ibge\\AppData\\Roaming\\NuGet\\NuGet.Config"
