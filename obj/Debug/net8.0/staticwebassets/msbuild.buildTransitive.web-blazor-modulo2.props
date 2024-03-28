@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\web-blazor-modulo2.props" />
+</Project>

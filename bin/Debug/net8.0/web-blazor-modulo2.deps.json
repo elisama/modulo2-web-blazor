@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "web-blazor-modulo2/1.0.0": {
+        "runtime": {
+          "web-blazor-modulo2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "web-blazor-modulo2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

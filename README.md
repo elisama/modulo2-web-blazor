@@ -17,6 +17,11 @@ Caso deseje criar juntamente a pasta que ele irá ser instalado, use o seguinte 
 
     `dotnet new blazor -o nome-da-nova-pasta`
 
+Verificando se a instalação ocorreu com sucesso:
+
+    `dotnet watch`
+
+Após a execução desse último comando, o aplicativo iniciará e aplicacará todas as alterações de código ao aplicativo em execução. Para encerrar a execução da aplicação, basta acionar *Ctrl + C*.
 
 ## 3    Qual a versão .NET do SDK foi instalada?
 
@@ -24,7 +29,7 @@ Caso se digite os comandos acima, a versão instalada será a mais recente que e
 
     `dotnet --list-sdks`
 
-Versão instalada como sendo a mais recente da máquina.
+Versão instalada como sendo a mais recente da máquina, o qual fica no arquivo com as principais configurações do projeto *arquivo.csproj*.
 
 <img width="680" alt="versao_framework" src="https://github.com/elisama/modulo2-web-blazor/assets/7691281/ea35b035-8dc4-4bc6-a8b0-d87a5250d3ba">
 
