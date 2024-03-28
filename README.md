@@ -53,8 +53,9 @@ Agora, caso haja em sua máquina outras versões do .NET e deseje instalar a apl
 <img width="399" alt="csproj" src="https://github.com/elisama/modulo2-web-blazor/assets/7691281/01ad0d4e-3690-4d10-a888-2646e5dd71aa">
 
 - *lauchSettings.json*: fica no diretório 'Properties', contém informações como:
-  - windowsAuthentication: <span style="color:red">false</span> ou <span style="color:blue">true</true>, define se haverá autentição necessária na aplicação. A autenticação do Windows (anteriormente chamada de NTLM e também chamada de autenticação de Desafio/Resposta do Windows NT) é uma forma segura de autenticação porque o nome de usuário e a senha são criptografados antes de serem enviados pela rede;
-  - anonymousAuthentication: <span style="color:red">false</span> ou <span style="color:blue">true</true>, a autenticação anônima dá aos usuários acesso às áreas públicas do seu site da Web ou FTP sem solicitar um nome de usuário ou senha;
+
+  - *windowsAuthentication*: <span style="color:red">false</span> ou <span style="color:blue">true</true>, define se haverá autentição necessária na aplicação. A autenticação do Windows (anteriormente chamada de NTLM e também chamada de autenticação de Desafio/Resposta do Windows NT) é uma forma segura de autenticação porque o nome de usuário e a senha são criptografados antes de serem enviados pela rede;
+  - *anonymousAuthentication*: <span style="color:red">false</span> ou <span style="color:blue">true</true>, a autenticação anônima dá aos usuários acesso às áreas públicas do seu site da Web ou FTP sem solicitar um nome de usuário ou senha;
   - dotnetRunMessages: <span style="color:red">false</span> ou <span style="color:blue">true</true>, oferecer um pronto feedback ao programador após a aplicação ser colocada para rodar e ocorra alguma alteração;
   - launchBrowser: informa se após a aplicação entrar em funcionamento após o `dotnet run` ou `dotnet watch`, o browser será aberto automaticamente na aplição;
   - applicationUrl: informa a URL local em que a aplicação irá rodar, como por exemplo "http://localhost:5234"
@@ -82,36 +83,38 @@ Welcome to your new app.
 
 ### 5.2 Passagem de parâmetro
 
+O componente *Counter.razor*, pode ser adicionado diretamente à outra página, ou também a outro componente, utilizando-se a inserção do código `<Counter />`. Contudo, caso se deseje passar algum parâmetro, como neste exemplo o parâmetro **IncrementAmount** que pertence a um método do componente *Counter.razor*, basta inseri-lo no código conforme encontra-se abaixo.
+
 ```cake
-    @page "/"
+@page "/"
 
-    <h1>Hello, world!</h1>
+<h1>Hello, world!</h1>
 
-    Welcome to your new app.
+Welcome to your new app.
 
-    <Counter IncrementAmount="10" />
+<Counter IncrementAmount="10" />
 ```
 
+Para que o método do componente possa receber valor de um outro componente que o esteja incorporando, basta colocarmos <span style="color:gray">[Parameter]</span> na declaração desse parâmetro que ele então irá operar dessa maneira.
+
 ```cake
-    @page "/counter"
-    @rendermode InteractiveServer
+@page "/counter"
+@rendermode InteractiveServer
 
-    <PageTitle>Counter</PageTitle>
+<PageTitle>Counter</PageTitle>
 
-    @code {
-        private int currentCount = 0;
+@code {
+    private int currentCount = 0;
 
-        [Parameter]
-        public int IncrementAmount { get; set; } = 1;
+    [Parameter]
+    public int IncrementAmount { get; set; } = 1;
 
-        private void IncrementCount()
-        {
-            currentCount += IncrementAmount;
-        }
+    private void IncrementCount()
+    {
+        currentCount += IncrementAmount;
     }
+}
 ```
-
-
 
 ## 6    Material de Suporte
 
