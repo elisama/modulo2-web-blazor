@@ -41,11 +41,18 @@ Agora, caso haja em sua máquina outras versões do .NET e deseje instalar a apl
 
 ## 4    Arquivos Importantes
 
-- *Program.cs*: 
+- *Program.cs*: é o ponto de entrada do aplicativo, como se fosse o código de start. Aqui o servidor é configurado e o programador pode configurar os serviços de aplicativos e o [middleware](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0) [^1].
 
-- **:
+- *App.razor*:
 
+- *Routes.razor*:
 
+- *BlazorApp.csproj*:
+
+- *lauchSettings.json* ou *appsettings.json*:
+
+[^1]: O middleware é um software montado em um pipeline de aplicativo para manipular solicitações e respostas. Os delegados de solicitação são configurados usando os métodos de extensão Run, Map e Use.
+### 4.1 Rota
 ```cake
 @page "/"
 
@@ -62,6 +69,14 @@ Welcome to your new app.
 ## 6    Material de Suporte
 
 - [Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Criar e realçar blocos de código](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)
 
 
 ## 7    Agradecimento
+
+- Microsoft
+- IBGE
+
+## Data
+
+28 de março de 2024.
