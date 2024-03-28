@@ -3,6 +3,7 @@
 [Criar o seu primeiro aplicativo Web com o Blazor](https://learn.microsoft.com/pt-br/training/modules/build-your-first-blazor-web-app/)
 
 ## 1    Objetivos de aprendizagem
+
 Neste módulo, você vai:
 
 - Configurar o seu ambiente local para o desenvolvimento do Blazor.
@@ -43,18 +44,29 @@ Agora, caso haja em sua máquina outras versões do .NET e deseje instalar a apl
 
 - *Program.cs*: é o ponto de entrada do aplicativo, como se fosse o código de start. Aqui o servidor é configurado e o programador pode configurar os serviços de aplicativos e o [middleware](https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0) [^1].
 
-- *App.razor*:
+- *App.razor*: é o componente raiz do aplicativo;
 
-- *Routes.razor*:
+- *Routes.razor*: configura as rotas das páginas;
 
-- *BlazorApp.csproj*:
+- *BlazorApp.csproj*: define o tipo de SDK utilizado, a versão do .NET, o tipo de aplicativo, se é razor, assembly, etc, e suas dependências;
 
-- *lauchSettings.json* ou *appsettings.json*:
+<img width="399" alt="csproj" src="https://github.com/elisama/modulo2-web-blazor/assets/7691281/01ad0d4e-3690-4d10-a888-2646e5dd71aa">
+
+- *lauchSettings.json*: fica no diretório 'Properties', contém informações como:
+  - windowsAuthentication: <span style="color:red">false</span> ou <span style="color:blue">true</true>, define se haverá autentição necessária na aplicação. A autenticação do Windows (anteriormente chamada de NTLM e também chamada de autenticação de Desafio/Resposta do Windows NT) é uma forma segura de autenticação porque o nome de usuário e a senha são criptografados antes de serem enviados pela rede;
+  - anonymousAuthentication: <span style="color:red">false</span> ou <span style="color:blue">true</true>, a autenticação anônima dá aos usuários acesso às áreas públicas do seu site da Web ou FTP sem solicitar um nome de usuário ou senha;
+  - dotnetRunMessages: <span style="color:red">false</span> ou <span style="color:blue">true</true>, oferecer um pronto feedback ao programador após a aplicação ser colocada para rodar e ocorra alguma alteração;
+  - launchBrowser: informa se após a aplicação entrar em funcionamento após o `dotnet run` ou `dotnet watch`, o browser será aberto automaticamente na aplição;
+  - applicationUrl: informa a URL local em que a aplicação irá rodar, como por exemplo "http://localhost:5234"
+
 
 [^1]: O middleware é um software montado em um pipeline de aplicativo para manipular solicitações e respostas. Os delegados de solicitação são configurados usando os métodos de extensão Run, Map e Use.
 ### 4.1 Rota
+
+As rotas das páginas no razor são definidas no arquivo *nome.razor* logo na primeira linha, após o código `@page "/nomedarota"`. Será esse "nomedarota" que aparecerá na barra de endereço do navegador, logo após o nome completo do domínio.
+
 ```cake
-@page "/"
+@page "/nomedarota"
 
 <PageTitle>Home</PageTitle>
 
@@ -64,6 +76,41 @@ Welcome to your new app.
 ```
 
 ## 5    Modificações 
+
+### 5.1 Incorporação de componente
+
+
+### 5.2 Passagem de parâmetro
+
+```cake
+    @page "/"
+
+    <h1>Hello, world!</h1>
+
+    Welcome to your new app.
+
+    <Counter IncrementAmount="10" />
+```
+
+```cake
+    @page "/counter"
+    @rendermode InteractiveServer
+
+    <PageTitle>Counter</PageTitle>
+
+    @code {
+        private int currentCount = 0;
+
+        [Parameter]
+        public int IncrementAmount { get; set; } = 1;
+
+        private void IncrementCount()
+        {
+            currentCount += IncrementAmount;
+        }
+    }
+```
+
 
 
 ## 6    Material de Suporte
